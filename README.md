@@ -1,2 +1,2 @@
-# unraid_template_LibreLinkUp_Uploader
-Unraid template for https://github.com/timoschlueter/nightscout-librelink-up
+# UNRAID Template for NightScout LibeLink Up Uploader
+https://github.com/timoschlueter/nightscout-librelink-up
