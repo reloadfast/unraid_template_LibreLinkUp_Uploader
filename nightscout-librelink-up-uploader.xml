@@ -87,7 +87,7 @@ Notes:&#xD;
 	        Type="Variable"
 	        Display="always"
 	        Required="true"
-	        Mask="false">d2657de8d95a4c6ae36c43294a28a01e765ddf7c</Config>
+	        Mask="false"></Config>
 	<Config Name="Log Level"
 	        Target="LOG_LEVEL"
 	        Default="info"
