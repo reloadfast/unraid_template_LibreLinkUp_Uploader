@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<Container version="2">
+	<Name>nightscout-librelink-up-uploader</Name>
+	<Repository>timoschlueter/nightscout-librelink-up</Repository>
+	<Registry/>
+	<Network>bridge</Network>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support/>
+	<Project>https://github.com/timoschlueter/nightscout-librelink-up</Project>
+	<Overview>From: https://github.com/timoschlueter/nightscout-librelink-up&#xD;
+"Script written in TypeScript that uploads CGM readings from LibreLink Up to Nightscout. The upload should work with at least Freestyle Libre 2 (FGM) and Libre 3 CGM sensors."&#xD;
+&#xD;
+This container will upload LibreLink Up (FreeStyle Libre 2/3) CGM data to your NightScout instance.&#xD;
+&#xD;
+Prerequesites:&#xD;
+- Working NightScout instance&#xD;
+- NightScout subject and access token for this uploader (https://github.com/timoschlueter/nightscout-librelink-up/issues/64#issuecomment-1252018083)&#xD;
+- LibreLink Up follower account already setup. I'd recommend you create a new follower just for this uploader, you risk locking up your account temporarily while you troubleshoot any problems with the uploader's configuration. Ask me how I know.&#xD;
+&#xD;
+Notes:&#xD;
+- The access token must be hashed with SHA1 (you can use https://codebeautify.org/sha1-hash-generator).&#xD;
+&#xD;
+</Overview>
+	<Category>Tools: Other:</Category>
+	<WebUI/>
+	<TemplateURL/>
+	<Icon>https://imgur.com/1LWfdWe</Icon>
+	<ExtraParams/>
+	<PostArgs/>
+	<CPUset/>
+	<DateInstalled>1700511163</DateInstalled>
+	<DonateText/>
+	<DonateLink/>
+	<Requires/>
+	<Config Name="LibreLink Up Username"
+	        Target="LINK_UP_USERNAME"
+	        Default=""
+	        Mode=""
+	        Description="This will be the account email for your LibreLink Up follower account, NOT your LibreView account."
+	        Type="Variable"
+	        Display="always"
+	        Required="true"
+	        Mask="false">librelinkUp@email.com</Config>
+	<Config Name="LiberLink Up Password"
+	        Target="LINK_UP_PASSWORD"
+	        Default=""
+	        Mode=""
+	        Description="This will be the password for your LibreLink Up follower account, NOT your LibreView account."
+	        Type="Variable"
+	        Display="always"
+	        Required="true"
+	        Mask="true">librelinkupPassword</Config>
+	<Config Name="Refresh Interval"
+	        Target="LINK_UP_TIME_INTERVAL"
+	        Default=""
+	        Mode=""
+	        Description=""
+	        Type="Variable"
+	        Display="always"
+	        Required="true"
+	        Mask="false">5</Config>
+	<Config Name="LibreLink Up Region"
+	        Target="LINK_UP_REGION"
+	        Default=""
+	        Mode=""
+	        Description="Your region. Used to determine the correct LibreLinkUp service (Possible values: AE, AP, AU, CA, DE, EU2, EU2, FR, JP, US)"
+	        Type="Variable"
+	        Display="always"
+	        Required="true"
+	        Mask="false">EU</Config>
+	<Config Name="NightScout URL"
+	        Target="NIGHTSCOUT_URL"
+	        Default=""
+	        Mode=""
+	        Description=""
+	        Type="Variable"
+	        Display="always"
+	        Required="true"
+	        Mask="false">0.0.0.0:1337</Config>
+	<Config Name="Hashed NightScout Subject Token"
+	        Target="NIGHTSCOUT_API_TOKEN"
+	        Default=""
+	        Mode=""
+	        Description="Token must be hashed.&#13;&#10;https://github.com/timoschlueter/nightscout-librelink-up/issues/64#issuecomment-1252018083"
+	        Type="Variable"
+	        Display="always"
+	        Required="true"
+	        Mask="false">d2657de8d95a4c6ae36c43294a28a01e765ddf7c</Config>
+	<Config Name="Log Level"
+	        Target="LOG_LEVEL"
+	        Default="info"
+	        Mode=""
+	        Description=""
+	        Type="Variable"
+	        Display="always"
+	        Required="true"
+	        Mask="false">info</Config>
+	<Config Name="Disable NightScout HTTPS"
+	        Target="NIGHTSCOUT_DISABLE_HTTPS"
+	        Default="false"
+	        Mode=""
+	        Description="Change to true if you're running a local instalation of NightScout wihout https"
+	        Type="Variable"
+	        Display="always"
+	        Required="false"
+	        Mask="false">false</Config>
+	<Config Name="Single Shot"
+	        Target="SINGLE_SHOT"
+	        Default="false"
+	        Mode=""
+	        Description="Will execute once and close. Useful to troubleshoot problems with the configuration."
+	        Type="Variable"
+	        Display="always"
+	        Required="false"
+	        Mask="false">false</Config>
+	<Config Name="Timezone"
+	        Target="TZ"
+	        Default="Europe/Madrid"
+	        Mode=""
+	        Description=""
+	        Type="Variable"
+	        Display="always"
+	        Required="false"
+	        Mask="false">Europe/Madrid</Config>
+</Container>
