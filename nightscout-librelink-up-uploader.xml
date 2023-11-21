@@ -4,7 +4,6 @@
 	<Repository>timoschlueter/nightscout-librelink-up</Repository>
 	<Registry/>
 	<Network>bridge</Network>
-	<MyIP/>
 	<Shell>sh</Shell>
 	<Privileged>false</Privileged>
 	<Support>https://forums.unraid.net/topic/148184-support-nightscout-librelink-up-uploader-placeholder/<Support/>
