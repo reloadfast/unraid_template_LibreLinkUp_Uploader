@@ -69,6 +69,15 @@ Notes:&#xD;
 	        Display="always"
 	        Required="true"
 	        Mask="false">EU</Config>
+	<Config Name="LibreLink Up App Version"
+	        Target="LINK_UP_VERSION"
+	        Default="4.16.0"
+	        Mode=""
+	        Description="This may need to be updated if you are using a newer version of the LibreLink Up App"
+	        Type="Variable"
+	        Display="always"
+	        Required="true"
+	        Mask="false">4.16.0</Config>
 	<Config Name="NightScout URL"
 	        Target="NIGHTSCOUT_URL"
 	        Default=""
@@ -124,3 +133,4 @@ Notes:&#xD;
 	        Required="false"
 	        Mask="false">Europe/Madrid</Config>
 </Container>
+
